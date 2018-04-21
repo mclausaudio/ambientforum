@@ -8,7 +8,7 @@ const gulp = require("gulp"),
     hexrgba = require('postcss-hexrgba');
 
 gulp.task('styles', function(){
-  return gulp.src('public/styles/styles.css')
+  return gulp.src('styles/styles.css')
       .pipe(postcss([cssImport, cssvars, nested, hexrgba, autoprefixer]))
       .on('error', function(errorInfo){
         console.log(errorInfo.toString());
@@ -21,7 +21,7 @@ gulp.task("watch", function(){
     watch("./views/**/*.ejs", function(){
         gulp.start('styles');
     })
-    watch("./public/styles/**/*.css", function (){
+    watch("./styles/**/*.css", function (){
         gulp.start('styles');
     })
 })
