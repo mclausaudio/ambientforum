@@ -1,0 +1,37 @@
+{
+  "name": "synthhoarders",
+  "version": "1.0.0",
+  "description": "remake of geartalk",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mclausaudio/synthhoarders.git"
+  },
+  "author": "Michael Claus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mclausaudio/synthhoarders/issues"
+  },
+  "homepage": "https://github.com/mclausaudio/synthhoarders#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "mongoose": "^5.0.15",
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-watch": "^5.0.0",
+    "postcss": "^6.0.21",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-simple-vars": "^4.1.0"
+  }
+}
