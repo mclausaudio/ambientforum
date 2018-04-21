@@ -1,6 +1,12 @@
 const express = require("express"),
-app = express();
+app = express(),
+mongoose = require("mongoose"),
+bodyparser = require("body-parser");
 
+
+
+mongoose.connect('mongodb://localhost/synthhoarders');
+app.use(bodyparser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
