@@ -1,7 +1,21 @@
 <% include ../partials/header %>
 
-<h1>Index page</h1>
+  <section class="hero">
+    <div class="hero__bg-image" style="background-image: url('images/vladimir-kudinov-58771-unsplash.jpg');"></div>
+    <div class="hero__text-content">
+      <h1 class="hero__title">Synth Herders</h1>
+      <a href="posts/new" class="btn">Create New Post</a>
+    </div>
+  </section>
+  
+  <section>
+    <% posts.reverse().forEach(function(post){ %>
+      <div>
+        <img src="<%= post.image %>">
+      </div>
+    <% }) %>
+  </section>
 
-<a href="/posts/new" class="btn">Create new post</a>
+
 
 <% include ../partials/footer %>

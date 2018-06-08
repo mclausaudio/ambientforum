@@ -1,4 +1,8 @@
 .btn {
-    background-color: yellow;
-    font-size:3rem;
+    font-weight: 300;
+    background-color: grey;
+    padding:.7rem;
+    font-size:1rem;
+    
+    
 }
