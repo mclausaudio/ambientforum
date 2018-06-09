@@ -1,0 +1,44 @@
+.show {
+    text-align: center;
+    margin-bottom: 4rem;    
+    margin-left:auto;
+    margin-right:auto;
+  
+  
+    &__individual-post {
+        margin-bottom: 4rem;
+    }
+  
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__title:hover {
+        text-decoration: underline;
+        transition: color 0.3s ease-in;
+    }
+  
+    &__text {
+        text-align:left;
+        color: #8a8a8a;
+    }
+    
+    &__image {
+        margin-bottom: 1.5rem;
+    }
+    
+    &__date {
+        font-size: 0.8rem;
+        color: #8a8a8a;
+    }
+    
+    &__button {
+        padding: 0.85rem 3rem;
+        background: #1779ba;     
+    }
+    
+    &__button:hover {
+        background-color: #146aa3;
+        transition: color 0.3s ease-in;  
+    }
+}

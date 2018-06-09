@@ -1,6 +1,9 @@
 @import "normalize.css";
+@import "../node_modules/foundation-sites/dist/css/foundation.min.css";
 @import "base/_global";
 @import "modules/_btn";
 @import "modules/_nav";
 @import "modules/_container";
 @import "modules/_hero";
+@import "modules/_wrapper";
+@import "modules/_show";

@@ -1,5 +1,6 @@
 <% include ../partials/header %>
 
+<div class="wrapper">
   <section class="hero">
     <div class="hero__bg-image" style="background-image: url('images/vladimir-kudinov-58771-unsplash.jpg');"></div>
     <div class="hero__text-content">
@@ -7,15 +8,28 @@
       <a href="posts/new" class="btn">Create New Post</a>
     </div>
   </section>
+
   
   <section>
+    <div class="grid-x text-center">
     <% posts.reverse().forEach(function(post){ %>
-      <div>
-        <img src="<%= post.image %>">
-      </div>
-    <% }) %>
-  </section>
+      <div class="cell small-3 text-center">
+        <div class="card">
+          <img src="<%= post.image %>">
+          <div class="card-divider">
+            <h5><%= post.title %></h5>
+          </div>
+          <div class="card-divider">
+            <p>Posted by: User</p>
+            <a href="/posts/<%= post._id %>" class="button">View</a>
+          </div>
+        </div>
 
+      </div>
+    <% }); %>
+    </div>
+  </section>
+</div>
 
 
 <% include ../partials/footer %>
