@@ -1,7 +1,8 @@
 const express = require("express"),
 app = express(),
 mongoose = require("mongoose"),
-bodyparser = require("body-parser");
+bodyparser = require("body-parser"),
+methodOverride = require('method-override');
 
 var seedDB = require('./seeds.js'),
 Post = require('./models/post.js');
@@ -13,6 +14,7 @@ mongoose.connect('mongodb://localhost/synthhoarders');
 app.use(bodyparser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
+app.use(methodOverride("_method"));
 
 
 seedDB();

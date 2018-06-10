@@ -5,4 +5,17 @@
       <h1 class="hero__title">New Post</h1>
     </div>
   </section>
+  
+  <section class="new">
+    <div class="new__form-container">
+      <form class="new__form"action="/posts" method="POST">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="image" placeholder="Image URL">
+        <textarea class="new__form-text-area" name="text">Enter post here</textarea>
+        <button class="button expanded">Submit</button>
+      </form>      
+    </div>
+  </section>
+  
+  
 <% include ../partials/footer %>

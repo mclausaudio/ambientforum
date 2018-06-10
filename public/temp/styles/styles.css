@@ -2295,7 +2295,7 @@ section {
         text-align: center;
         align-items:stretch;
         color:#fff;
-        height:26rem;
+        height:18rem;
     
 }
 
@@ -2304,7 +2304,7 @@ section {
         top: 0;
         left: 0;
         width:100%;
-        height:26rem;
+        height:18rem;
         background-size: cover;
         background-position: 50% 40%;
         background-repeat: no-repeat;
@@ -2366,4 +2366,26 @@ section {
 .show__button:hover {
         background-color: #146aa3;
         transition: color 0.3s ease-in;  
+    }
+
+.new__form-container {
+        margin: 0 auto;
+        width:40rem;
+        position: relative;
+        z-index: 0;
+        display:flex;
+        border: 0;
+        border-radius: 0;
+        background: #fefefe;
+        box-shadow: none;
+        overflow: hidden;
+        color: #0a0a0a;
+    }
+
+.new__form {
+        width:100%;
+    }
+
+.new__form-text-area {
+        height:12rem;
     }

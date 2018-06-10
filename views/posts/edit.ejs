@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+  <section class="hero">
+    <div class="hero__bg-image" style="background-image: url('images/vladimir-kudinov-58771-unsplash.jpg');"></div>
+    <div class="hero__text-content">
+      <h1 class="hero__title">Edit Post</h1>
+    </div>
+  </section>
+  
+  <section class="new">
+    <div class="new__form-container">
+      <form class="new__form"action="/posts/<%= post._id %>?_method=PUT" method="POST">
+        <input type="text" name="post[title]" value="<%= post.title %>">
+        <input type="text" name="post[image]" value="<%= post.image %>">
+        <textarea class="new__form-text-area" name="post[text]"><%= post.text %></textarea>
+        <button class="button expanded">Submit</button>
+      </form>      
+    </div>
+  </section>
+  
+  
+<% include ../partials/footer %>
