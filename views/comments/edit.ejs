@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+  <section class="hero">
+    <div class="hero__bg-image"></div>
+    <div class="hero__text-content">
+      <h1 class="hero__title">Edit Comment</h1>
+    </div>
+  </section>
+  
+  <section class="new">
+    <div class="new__form-container">
+      <form class="new__form" action="/posts/<%= post_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+        <textarea class="new__form-text-area" name="comment[text]"> <%= comment.text %></textarea>
+        <button class="button expanded">Submit</button>
+      </form>      
+    </div>
+  </section>
+  
+  
+<% include ../partials/footer %>

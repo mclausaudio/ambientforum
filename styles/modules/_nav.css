@@ -14,6 +14,7 @@
     }
     
     &__nav {
+        padding-top:12px;
         list-style-type: none;
         display:flex;
         

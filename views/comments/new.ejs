@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+  <section class="hero">
+    <div class="hero__bg-image" style="background-image: url('images/vladimir-kudinov-58771-unsplash.jpg');"></div>
+    <div class="hero__text-content">
+      <h1 class="hero__title">New Comment on <%= post.title %></h1>
+    </div>
+  </section>
+  
+  <section class="new">
+    <div class="new__form-container">
+      <form class="new__form"action="/posts/<%= post._id %>/comments" method="POST">
+        <textarea class="new__form-text-area" name="comment[text]">Enter post here</textarea>
+        <button class="button expanded">Submit</button>
+      </form>      
+    </div>
+  </section>
+  
+  
+<% include ../partials/footer %>

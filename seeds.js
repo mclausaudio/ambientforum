@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'), 
-    Post = require('./models/post.js');
+    Post = require('./models/post.js'),
+    Comment = require('./models/comment.js');
     
 var data = [
     {
@@ -45,15 +46,29 @@ function seedDB () {
         } else {
             console.log("seeds cleared");
             
-            data.forEach(function(seed){
-                Post.create(seed, function(err, seedPost){
-                    if (err) {
-                        console.log(err)
-                    } else {
-                        console.log('seed added')
-                    }
-                })
-            })
+            //to prevent database creation during development, comment out the code below
+            // data.forEach(function(seed){
+            //     Post.create(seed, function(err, seedPost){
+            //         if (err) {
+            //             console.log(err)
+            //         } else {
+            //             console.log('seed added')
+            //             Comment.create(
+            //                 {
+            //                     text: "this is comment text for the seeded comment blh blah blah",
+            //                     author: "fake user"
+            //                 }, function (err, comment){
+            //                     if (err) {
+            //                         console.log(err)
+            //                     } else {
+            //                         seedPost.comments.push(comment);
+            //                         seedPost.save();
+            //                         console.log("created new comment");
+            //                     }
+            //                 })
+            //         }
+            //     })
+            // })
         }
     })
 }

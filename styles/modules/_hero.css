@@ -3,9 +3,11 @@
         justify-content:center;
         text-align: center;
         align-items:stretch;
-        color:#fff;
+        color:#1779ba;
         height:18rem;
+        
     &__bg-image {
+        background-image: url('../../images/photo-1478359698755-9032f80b4578.jpg');
         position: absolute;
         top: 0;
         left: 0;
@@ -15,7 +17,7 @@
         background-position: 50% 40%;
         background-repeat: no-repeat;
         z-index:-1;
-        background-color:#80a3db;
+        
     }
     
     &__text-content {

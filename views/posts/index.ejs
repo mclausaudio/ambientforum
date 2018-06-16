@@ -2,32 +2,40 @@
 
 <div class="wrapper">
   <section class="hero">
-    <div class="hero__bg-image" style="background-image: url('images/vladimir-kudinov-58771-unsplash.jpg');"></div>
+    <div class="hero__overlay"><div class="hero__bg-image"></div></div>
     <div class="hero__text-content">
-      <h1 class="hero__title">Synth Herders</h1>
-      <a href="/posts/new" class="button">Create New Post</a>
+      <h1 class="hero__title">Ambient Forum</h1>
+      <div class="button-group float-center">
+        <% if (currentUser) { %>
+          <a class="button hollow" href="/posts/new">New Post</a>
+        <% } else { %>
+        <a class="button hollow" href="/login">Login</a>
+        <a class="button hollow" href="/register">Sign Up</a>
+        <% } %>
+      </div>
     </div>
   </section>
 
-  
   <section>
-    <div class="grid-x text-center">
-    <% posts.reverse().forEach(function(post){ %>
-      <div class="cell small-3 text-center">
-        <div class="card">
-          <img src="<%= post.image %>">
-          <div class="card-divider">
-            <h5><%= post.title %></h5>
+    <div class="container">
+      <div class="grid-x text-center">
+      <% posts.reverse().forEach(function(post){ %>
+        <div class="cell small-3 text-center card--padding">
+          <div class="card card--padding">
+            <img src="<%= post.image %>">
+            <div class="card-divider">
+              <h5><%= post.title %></h5>
+            </div>
+            <div class="card-divider">
+              <p>Posted by: <%= post.author.username %> </p>
+              <p><a href="/posts/<%= post._id %>" class="button hollow">View</a></p>
           </div>
-          <div class="card-divider">
-            <p>Posted by: User</p>
-            <a href="/posts/<%= post._id %>" class="button">View</a>
           </div>
         </div>
-
-      </div>
-    <% }); %>
+      <% }); %>
+      </div>  
     </div>
+    
   </section>
 </div>
 
