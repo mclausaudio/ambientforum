@@ -17,7 +17,11 @@ var postRoutes = require('./routes/posts.js'),
     commentRoutes = require('./routes/comments.js');
 
 
-mongoose.connect('mongodb://localhost/synthhoarders');
+mongoose.connect('mongodb://mike:ambientforum415@ds263460.mlab.com:63460/ambientforum');
+
+// mongodb://localhost/synthhoarders
+
+
 app.use(bodyparser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
