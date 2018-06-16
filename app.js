@@ -3,6 +3,7 @@ app = express(),
 mongoose = require("mongoose"),
 bodyparser = require("body-parser"),
 methodOverride = require('method-override'),
+expressSanitizer = require('express-sanitizer'),
 passport = require('passport'),
 localStrategy = require('passport-local'),
 session = require('express-session');
@@ -26,6 +27,7 @@ app.use(bodyparser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
+app.use(expressSanitizer());
 
 
 //passport config

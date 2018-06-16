@@ -2248,6 +2248,12 @@ section {
     font-size:1rem;
 }
 
+/*.button {*/
+
+/*    width:100%;*/
+
+/*}*/
+
 .navbar {
     background-color:#fff;
     width:100%;
@@ -2395,6 +2401,18 @@ section {
     width:40%;
 }
 
+.card-divider {
+        padding:.2rem;
+    }
+
+.card-container {
+        width:100%;
+    }
+
 .card--padding {
         padding: .7rem;
+    }
+
+.card__button {
+        display:block;
     }

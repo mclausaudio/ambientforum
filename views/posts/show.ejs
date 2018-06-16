@@ -13,7 +13,8 @@
                     </form>
                 </div>
             <% } %>
-            <p class="show__text"> <%= post.text %></p>    
+            <!-- By changing the = (equal sign) to a - (dash), the EJS code around post.text will have any code ccontained executed, meaning that users can use basic HTML to style their post -->
+            <p class="show__text"> <%- post.text %></p>    
             
             
             <!--<a class="button" href="#">Read On</a>-->

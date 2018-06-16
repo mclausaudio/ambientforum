@@ -17,6 +17,8 @@ router.get("/", function(req, res){
 });
 // POST ROUTE
 router.post('/', middlewareObj.isLoggedIn, function(req, res){
+    req.body.text = req.sanitize(req.body.text);
+    
     var title = req.body.title,
         image = req.body.image,
         text = req.body.text,
@@ -63,6 +65,7 @@ router.get('/:id/edit', middlewareObj.checkPostOwnership, function(req, res){
 })
 //UPDATE
 router.put('/:id', middlewareObj.checkPostOwnership, function(req, res){
+    req.body.post.text = req.sanitize(req.body.post.text);
     Post.findByIdAndUpdate(req.params.id, req.body.post, function(err, updatedPost){
         if (err) {
             console.log(err)
