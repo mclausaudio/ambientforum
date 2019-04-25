@@ -16,4 +16,6 @@ Ambient forums is an online message board devoted to the discussion of ambient m
 ## Implementing Gulp and PostCSS
 This was the first time I had ever used GULP with PostCSS.  It was an awesome experience and using GULP really took my css skills to the next level.  PostCSS includes some awesome functionality such as nested css and css variables.  Building with the two was a great experience and really opened my mind up to new build tools.
 
+![Gulp](gulp.png)
+
 
